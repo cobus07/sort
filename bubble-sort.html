@@ -1,0 +1,39 @@
+/**
+ * Created by pbsun on 2016/9/8.
+ */
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    var arr = [5, 2, 9, 0, 7];
+//    交换函数，作用是交换两个位置的值
+    function swap(myArray, p1, p2){
+        var temp = myArray[p1];
+        myArray[p1] = myArray[p2];
+        myArray[p2] = temp;
+    }
+
+//    主函数
+function bubbleSort(myArray){
+
+    for (var i = 0, len = myArray.length; i < len - 1; i++){
+        for (var j = 0, stop = len - 1 - i; j < stop; j++){
+            if (myArray[j] > myArray[j + 1]){
+                swap(myArray, j, j + 1);
+            }
+        }
+    }
+console.log(myArray);
+    return myArray;
+}
+bubbleSort(arr);
+</script>
+</body>
+</html>
